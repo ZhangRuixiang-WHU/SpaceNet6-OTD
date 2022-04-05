@@ -2,7 +2,7 @@
 <html>
 <head>
 
-	<title>AI-TOD-v2</title>
+	<title>SpaceNet6-OTD</title>
 	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
 	<link href="css/main.css" media="screen" rel="stylesheet" type="text/css"/>
 	<link href="css/index.css" media="screen" rel="stylesheet" type="text/css"/>
@@ -29,13 +29,13 @@
 			<tr>
 				<td>
 					<div class="logo">
-						<a href="javascript:void(0)">AI-TOD-v2</a>
+						<a href="javascript:void(0)">SpaceNet6-OTD</a>
 					</div>
 				</td>
 				<td>
 					<div class="menu-items">
 						<a class="menu-highlight">Overview</a>
-						<a href="https://github.com/Chasel-Tsui/Detecting-Tiny-Objects-in-Aerial-Images">GitHub</a>
+						<a href="https://github.com/ZhangRuixiang-WHU/SpaceNet6-OTD">GitHub</a>
 					</div>
 				</td>
 			</tr>
@@ -50,11 +50,12 @@
 				Detecting Tiny Objects in Aerial Images: A Normalized Wasserstein Distance and A New Benchmark </h1>
 	        
 				<p style="text-align:center; margin-bottom:15px; margin-top:20px; font-size: 18px;">
-					<a href="https://github.com/Chasel-Tsui" style="color: #0088CC">Chang Xu<script type="math/tex">^1</script>, </a>
-					<a href="https://github.com/jwwangchn" style="color: #0088CC">Jinwang Wang<script type="math/tex">^1</script>, </a>
+					<a href="https://github.com/ZhangRuixiang-WHU/" style="color: #0088CC">Ruixiang Zhang<script type="math/tex">^1</script>, </a>
+					<a href="https://github.com/whughw" style="color: #0088CC">Haowen Guo<script type="math/tex">^1</script>, </a>
+					<a href="https://github.com/xufangchn" style="color: #0088CC">Fang Xu<script type="math/tex">^1</script>, </a>
 					<a href="http://www.captain-whu.com/yangwen_En.html" style="color: #0088CC">Wen Yang<script type="math/tex">^{1,*}</script>, </a>
           <a href="https://github.com/levenberg" style="color: #0088CC">Huai Yu<script type="math/tex">^1</script>,</a>
-          <a href="http://dvs-whu.cn/" style="color: #0088CC">Lei Yu<script type="math/tex">^1</script>,</a> 
+          <a href="http://dvs-whu.cn/" style="color: #0088CC">Haijian Zhang<script type="math/tex">^1</script>,</a> 
 					<a href="http://www.captain-whu.com/xia_En.html" style="color: #0088CC">Gui-Song Xia<script type="math/tex">^{2}</script>, </a> <br>
 					<!-- <a href="http://www.dsi.unive.it/~pelillo/" style="color: #0088CC">Marcello Pelillo<script type="math/tex">^3</script></a> <br> -->
                      
@@ -78,22 +79,17 @@
 					<!-- <td colspan="1"> -->
 
 				<p class="text" style="text-align:justify;">
-					Tiny object detection (TOD) in aerial images is a challenging task since a tiny object only contains a
-          few pixels. State-of-the-art object detectors do not provide satisfactory results on tiny objects due to
-          the lack of supervision from discriminative features. Our key observation is that the Intersection over
-          Union (IoU) metric and its extensions are very sensitive to location deviation of the tiny objects, thus
-          drastically deteriorating the quality of label assignment when used in anchor-based detectors. To this
-          end, we propose a new evaluation metric dubbed Normalized Wasserstein Distance (NWD) and a new
-          RanKing based Assigning (RKA) strategy for tiny object detection. The proposed NWD-RKA strategy
-          can be easily embedded into all kinds of anchor-based detector to replace the standard IoU threshold
-          based one, thereby greatly alleviating problems in label assignment and providing sufficient supervision
-          information for network training. Tested on four datasets, NWD-RKA can consistently improve tiny
-          object detection performance by a large margin. Besides, observing obvious noisy labels in the dataset
-          for Tiny Object Detection in Aerial Images (AI-TOD), we are motivated to meticulously relabel AI-TOD
-          and release AI-TOD-v2 and its corresponding benchmark. In AI-TOD-v2, the missing annotation and
-          location error problems are considerably alleviated, facilitating more reliable training and validation
-          processes. Embedding NWD-RKA into DetectoRS, the detection performance achieves 4.3 AP points
-          improvement over state-of-the-art competitors on AI-TOD-v2.
+					In recent years, object detection in high-resolution SAR images has made significant progress, 
+					especially after the introduction of deep learning. However, the dense oil tanks, 
+					which are compactly arranged targets in SAR images, are still challenging to recognize due to the unique imaging mechanism of SAR. 
+					Inspired by human learning from comparison, we propose a multi-stage framework  for oil tank detection in SAR images using optical image enhancement. 
+					Specifically, in the training stage, we build the teacher-student network to transfer the knowledge between the two modalities, 
+					where the optical oil tank features are used to guide SAR oil tank features learning. While in the inference stage, 
+					the network detects oil tank targets using only SAR images as input. Besides, a pre-training stage before training is applied to 
+					further improve the network's ability for SAR feature extraction, which is realized by the proposed 
+					paired optical-SAR self-supervised learning. To verify the effectiveness of the proposed method, 
+					we performed experiments on our newly built SpaceNet6-OTD dataset. 
+					Extensive experiments demonstrate that the proposed method can effectively improve the performance of SAR image oil tank detection.
 				</p>
 					<!-- </td> -->
 			</tr>
@@ -107,26 +103,48 @@
 
 			<tr>
 				<p class="text" style="text-align:justify;">
-					Tiny objects are ubiquitous in aerial images, meanwhile detecting tiny objects in aerial images has many application
-          scenarios, including vehicle detection, traffic condition monitoring
-          and maritime rescue. Even though object detection has
-          achieved significant progress thanks to the development of
-          deep neural networks, most of them are dedicated to detecting objects
-          of normal size. While tiny objects (less than 16*16 pixels
-          in the AI-TOD dataset [1]) in aerial images often exhibit with extremely limited appearance information,
-          which poses great challenges in learning discriminative features, leading to enormous failure cases when detecting tiny objects. 
+					Synthetic Aperture Radar~(SAR) sensors have the unique capability to penetrate clouds and collect during all-weather, day, and night conditions,
+					which has been widely used in both civilian and military fields . 
+					High-resolution SAR data can provide more valuable information when weather and cloud cover can obstruct traditional optical sensors, 
+					which are suitable for detecting and monitoring some typical objects, such as buildings, ships, planes, vehicles, and oil tanks. 
+					In this work, we focus on detecting oil tanks in  high-resolution SAR images.
+ 
           <br>
           <br>
-          For tiny objects, IoU metric suffers from the problem of sensivity to location deviation, and it fails to reflect the positional relationship of two bounding boxes when they have no overlap or are mutually inclusive, thus leading to three drawbacks in label assignment: severe pos/neg sample imbalance for tiny objects, scale-sample imbalance and failure of sample-compensation. In addition, we observe obvious noisy labels in the dataset for Tiny Object Detection in Aerial Images (AI-TOD), where the problem of objects missed to be annotated is very obvious. And the label noise problem will greatly affect the training and validation of tiny object detectors.
+            However, detecting the oil tanks in SAR images is very challenging due to the unique imaging mechanism of SAR images. 
+			The oil tank targets in the SAR images are usually dense and compact with more overlaps and discrete scattering centers, which increases the difficulty of location in detection. 
+			Figure. 1 shows some samples of SAR images with oil tanks. 
+			As we can see, the heavy scattering interference between the dense oil tanks causes a blurred and cluttered appearance, which is hard to distinguish even the experts of SAR image analysis.
 				</p>
 			</tr>
 
 			<tr>
 				<td>
 					<div>
-					<img class="center" src="./images/fps2.gif" width="1000" /> <br>
+					<img class="center" src="./images/fig1.png" width="800" /> <br>
 					<p class="image-caption">
-						Figure 1. A comparison between the AI-TOD and AI-TOD-v2. Note that the green boxes denote the same bounding boxes in the two versions, the yellow boxes denote the supplemented boxes while the red boxes denote deleted boxes.
+						Figure 1. (a) is the high-resolution SAR image with compact oil tanks. The SAR Intensity is visualized with three polarizations (HH, VV, HV) displayed through the Red, Green, and Blue color channels. (b) is the corresponding optical image. (c) is the detection result of Faster R-CNN. (d) is the detection result of our method. (The green boxes refer to the correct detection results, the yellow boxes refer to the false detection results, and the red boxes refer to the missing targets.
+					</p>				
+					</div>
+				</td>
+			</tr>
+
+			<tr>
+				<p class="text" style="text-align:justify;">
+					For the existing methods, the unsatisfactory detection accuracy is mainly caused by the indistinguishable appearance of the oil tanks in  high-resolution SAR images. 
+					So naturally, how can we teach the network learning to recognize the oil tank in SAR images? 
+					As we all know, when humans encounter an illegible image of an unknown modality, 
+					we often learn to recognize it by comparing the corresponding image of a recognizable modality. 
+					Inspired by that, we propose introducing optical images more suitable for human vision to guide the network to learn the feature of oil tanks in SAR images. 
+				</p>
+			</tr>
+
+			<tr>
+				<td>
+					<div>
+					<img class="center" src="./images/fig2.png" width="800" /> <br>
+					<p class="image-caption">
+						Figure 2. The proposed pipeline for detecting oil tanks in SAR images, uses optical-SAR self-supervised learning to pre-train a better feature extractor as the initialization in the training stage. First, the optical network guides the SAR network as the teacher. Then, the model detects the oil tanks during inference using only SAR images as input.
 					</p>				
 					</div>
 				</td>
@@ -135,18 +153,21 @@
 			<tr>
 				<td>
 				<p class="text" style="text-align:justify;">
-					To address the aforementioned problems, we attempt to push forward the development of TOD in aerial images both from the aspect of method and data. Specifically, we propose a new metric dubbed Normalized Wasserstein Distance (NWD) and combine it with a customized RanKing-based training sample Assignment (RKA) strategy, simultaneously alleviating the above three drawbacks of IoU threshold based assignment. Moreover, we convene experts to meticulously relabel our preliminary TOD dataset AI-TOD and release AI-TOD-v2 along with its corrseponding benchmarks.
-					Our contributions are three-folds:
+					  Based on the above, we design a multi-stage pipeline for detecting oil tanks in SAR images with the enhancement of optical images, as shown in Figure. 2. 
+					  First, Optical-guided self-supervised learning is used in the pre-training stage to obtain the feature extractor suitable for SAR images. 
+					  Then, in the training stage,  a teacher-student network is constructed to make the SAR branch learn how to recognize oil tanks from the optical branch through knowledge distillation. 
+					  Finally, the model detects the oil tanks using only SAR images as input during the inference stage. Our contribution can be summarized as follows:
+					
 					<ul style="font-weight:normal; text-align:justify;">
-							<li> We propose NWD-RKA as a better training sample assignment strategy for tiny objects, which can simultaneously alleviate the three drawbacks of IoU threshold based strategy (i.e., severe pos/neg sample imbalance for tiny objects, scale-sample imbalance and failure of sample-compensation). </li>
-							<li> We carefully relabel AI-TOD and release AI-TOD-v2, where the label noise problem is greatly mitigated. Besides, we establish a comprehensive benchmark by several baseline detectors. The training/validation images and annotations will be made public. </li>
-							<li> Our proposed NWD-RKA can be applied to all kinds of anchor-based detectors and boost their performance on tiny objects. On AI-TOD-v2 dataset, we achieve the performance of 24.7% AP and 57.2% AP0.5, which is highly above the state-of-the-art competitors. Moreover, significant improvements can be seen on AI-TOD, VisDrone2019 [2] and DOTA-v2.0 [3] dataset.</li>							
+							<li> We propose a pipeline that uses optical images to guide SAR images to train a better oil tank detector in SAR images. Paired optical images and SAR images are used in the training stage, while only SAR images are used in the inference stage. </li>
+							<li> We introduce paired optical-SAR images into the self-supervised learning to obtain a better SAR image feature extractor, improving the downstream oil tank detection task by 8-9 %. </li>
+							<li> We construct an oil tank detection dataset, SpaceNet6-OTD, to explore the effectiveness of the proposed method. The dataset contains 820 paired SAR-Optical images with carefully labeled bounding boxes.</li>							
 					</ul>
 
 				</p>
 				</td>
 			</tr>
-      <tr>
+      <!-- <tr>
 				<td>
 						<h2 class="add-top-margin">AI-TOD-v2</h2>
 						<hr>
@@ -191,7 +212,7 @@
 			[<a href="https://drive.google.com/drive/folders/1mokzFtLCjyqalSEajYTUmyzXvOHAa4WX" style="color: #0088CC">images & annotations</a>]<br>
 			Note that the AI-TOD and AI-TOD-v2 share the image sets.
         </td>
-     </tr>
+     </tr> -->
 
 			<tr>
 				<td>
@@ -202,7 +223,7 @@
 
 			<tr>
 					<td>
-							<h3 class="add-top-margin">A Comparison of Different Methods on AI-TOD-v2</h3>
+							<h3 class="add-top-margin">A Comparison of Different Methods on SpaceNet6-OTD</h3>
 							
 					</td>
 			</tr>
@@ -210,35 +231,30 @@
 			<tr>
 				<td>
 					<div>
-					<img class="center" src="images/visu.png" width="1000" /> <br>
+					<img class="center" src="images/fig3.png" width="1000" /> <br>
 					<p class="image-caption">
-						Figure 3. Visualization of detection results using baseline detectors (first 4 rows) and NWD-RKA based detector (5th row) of AI-TOD-v2 dataset. The green, blue and red boxes denote true positive (TP), false positive (FP) and false negative (FN) predictions, respectively. Note that we apply NWD+RKA into DetectoRS in the 5th row.
+						Figure 3. Visualization of detection results using our proposed method compared with other state-of-the-art methods. The green boxes refer to the correct detection results, the yellow boxes refer to the false detection results, and the red boxes refer to the missing targets.
 					</p>				
 					</div>
 				</td>
 			</tr>
 
-			<tr>
+			<!-- <tr>
 				<td>
 						<h2 class="add-top-margin">Related Work</h2>
 						<hr>
 						<p class="text" style="text-align:justify;"></p>
 						Our work is built based on our past works including: <a href="https://ieeexplore.ieee.org/abstract/document/9413340" style="color: #0088CC">AI-TOD</a> [1], <a href="https://arxiv.org/abs/2102.12219" style="color: #0088CC">DOTA-v2.0</a> [3], <a href="https://openaccess.thecvf.com/content/CVPR2021W/EarthVision/html/Xu_Dot_Distance_for_Tiny_Object_Detection_in_Aerial_Images_CVPRW_2021_paper.html" style="color: #0088CC">DotD</a> [4] and <a href="https://arxiv.org/abs/2110.13389" style="color: #0088CC">NWD</a> [5]. If you found our work helpful, consider citing these works as well.
 				</td>
-			</tr>
+			</tr> -->
 			<tr>
 					<td>
 							<h2 class="add-top-margin">Acknowledgements</h2>
 							<hr>
 							<p class="text" style="text-align:justify;"></p>
-						We would like to thank Lanxin Zen, Xiangyuan Wang,
-						Hanqian Si and Yan Zhang for the voluntary relabeling
-						work; Haowen Guo and Ruixiang Zhang for helpful feedback
-						and discussions. This project has received funding from the
-						National Natural Science Foundation of China (NSFC) under
-						Grant 61771351. The numerical calculations were conducted
-						on the supercomputing system in the Supercomputing Center,
-						Wuhan University.
+						We would like to thank the anonymous reviewers for their valuable comments and contributions. 
+						This project has received funding from the National Natural Science Foundation of China (NSFC) under Grant 61771351. 
+						In addition, the numerical calculations in this article have been done on the supercomputing system in the Supercomputing Center, Wuhan University.
 							
 					</td>
 				</tr>
@@ -249,36 +265,32 @@
 					<hr>
 					<ol style="padding-inline-start:20px;">
 						<li>
-							<b>Tiny Object Detection in Aerial Images </b>
-							[<a href="https://ieeexplore.ieee.org/abstract/document/9413340" style="color: #0088CC">paper</a>]<br>
-								J. Wang, W. Yang, H. Guo, R. Zhang, G.-S. Xia <br>
-								IEEE Conference on Pattern Recognition (<b>ICPR</b>), 2021.
+							<b>Spacenet 6: Multi-sensor all weather mapping dataset </b>
+							[<a href="https://openaccess.thecvf.com/content_CVPRW_2020/papers/w11/Shermeyer_SpaceNet_6_Multi-Sensor_All_Weather_Mapping_Dataset_CVPRW_2020_paper.pdf" style="color: #0088CC">paper</a>]<br>
+								J. Shermeyer, D. Hogan, J. Brown, A. Van Etten, N. Weir,
+								F. Pacifici, R. Hansch, A. Bastidas, S. Soenen, T. Bacastow
+							et al. <br>
+								IEEE Conference on Computer Vision and Pattern Recognition Workshops (<b>CVPRW</b>), 2020.
 						</li>
 						<li>
-							<b>VisDrone-DET2019: The Vision Meets Drone Object Detection in Image Challenge Results </b>
-							[<a href="https://arxiv.org/abs/2102.12219" style="color: #0088CC">paper</a>]<br>
-							   Du. D, Zhu. P, Wen. L, et al. <br>
-							   IEEE Conference on Computer Vision and Pattern Recognition Workshops (<b>CVPRW</b>), 2019.
+							<b>Bootstrap your own latent-a new approach to self-supervised learning </b>
+							[<a href="https://proceedings.neurips.cc/paper/2020/file/f3ada80d5c4ee70142b17b8192b2958e-Paper.pdf" style="color: #0088CC">paper</a>]<br>
+								J.-B. Grill, F. Strub, F. Altch ́e, C. Tallec, P. Richemond,
+								E. Buchatskaya, C. Doersch, B. Avila Pires, Z. Guo, M. Gheshlaghi Azar et al. <br>
+								Advances in Neural Information Processing Systems (<b>NIPS</b>), 2020.
 						</li>	
 						<li>
-							<b>Object Detection in Aerial Images: A Large-scale Benchmark and Challenges </b>
-							[<a href="https://arxiv.org/abs/2102.12219" style="color: #0088CC">paper</a>]<br>
-							   J. Ding, N. Xue, G.-S. Xia, X. Bai, W. Yang, et al. <br>
-							   IEEE Trans. on Pattern Analysis and Machine Intelligence (<b>TPAMI</b>), 2021.
-						</li>	
-
-						<li>
-								<b>Dot Distance for Tiny Object Detection in Aerial Images</b>
-								[<a href="https://openaccess.thecvf.com/content/CVPR2021W/EarthVision/html/Xu_Dot_Distance_for_Tiny_Object_Detection_in_Aerial_Images_CVPRW_2021_paper.html" style="color: #0088CC">paper</a>]<br>
-								C. Xu, J. Wang, W. Yang, L, Yu <br>
-								IEEE Conference on Computer Vision and Pattern Recognition Workshops (<b>CVPRW</b>), 2021.
+							<b>EO-augmented building segmentation for airborne sar imagery </b>
+							[<a href="https://ieeexplore.ieee.org/abstract/document/9417203" style="color: #0088CC">paper</a>]<br>
+								J. Kim, S. Shin, S. Kim, and Y. Kim. <br>
+								IEEE Geoscience and Remote Sensing Letters (<b>GRSL</b>), 2021.
 						</li>	
 
 						<li>
-								<b>A Normalized Gaussian Wasserstein Distance for Tiny Object Detection</b>
-								[<a href="https://arxiv.org/abs/2110.13389" style="color: #0088CC">paper</a>]<br>
-								J. Wang, C. Xu, W. Yang, L. Yu <br>
-							    <b>arXiv</b>, 2021.
+							<b>Paying more attention to attention: improving the performance of convolutional neural networks via attention transfer </b>
+							[<a href="https://arxiv.org/pdf/1612.03928.pdf" style="color: #0088CC">paper</a>]<br>
+							N. Komodakis and S. Zagoruyko <br>
+							International Conference on Learning Representations (<b>ICLR</b>), 2017.
 						</li>	
 
 						
